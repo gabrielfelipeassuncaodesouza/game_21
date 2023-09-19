@@ -72,11 +72,23 @@ void clearscr() {
     printf("\x1b[H");
 }
 
+void printHeader() {
+    clearscr();
+    printf("\n********************\n");
+    printf("******** 21 ********\n");
+    printf("********************\n\n");
+
+    printf("Press any key to start the game... ");
+    getchar();
+}
+
 int main() {
     srand(time(NULL));
 
     char continueplay = 'y';
     int sum = 0;
+
+    printHeader();
 
     do {
         clearscr();
